@@ -1,0 +1,82 @@
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <time.h>
+#include <sstream>
+
+using namespace std;
+
+int main(){
+        int opcion;
+	do{
+       	   cout << "MENU" << endl;
+	   cout << "1. Mentes Maestras" << endl;
+	   cout << "2. Factorizacion" << endl;
+	   cout << "3. Recursiva" << endl;
+	   cout << "4. Salir" << endl;
+	   cin >> opcion;
+	   switch(opcion){
+		case 1:{
+			int cont = 1;
+			string str;
+			stringstream ss;
+     			int random = 0;
+			string num = 0;
+                        srand(time(NULL));
+                        random = rand()%99999 +10000;
+			ss << random;
+			str = ss.str();
+			cout << str << endl;		
+			while(cont < 6){
+			cout << "Ingrese numero de 5 digitos: " << endl;
+			cin >> num;
+			/*string s1,s2,s3,s4,s5;
+			string n1,n2,n3,n4,n5;
+			s1 = num.at(0);
+			s2 = num.at(1);
+			s3 = num.at(2);
+			s4 = num.at(3);
+			s5 = num.at(4);*/
+			
+			
+
+			/*for(int i =0;i < 5;i++){
+				for(int n =0;n < 5;n++){
+					if(num.at(n) == str.at(i)){
+					       if(i == n){
+							cout << "Su numero en la posicion " << n << "Coincide en la misma posicion" <<endl;
+						}else{
+							cout << "El numero en la posicion " <<  n << "existe pero no en la misma posicion" << endl;
+						}
+					}	
+				}
+			}*/
+ 			cont++;			
+			}
+			if(cont == 6){
+				cout << "Ya no tiene mas oportunidades" << endl;
+				cont = 1;
+			}
+			break;
+                }
+		case 2:{
+		
+			break;
+		}
+		case 3:{
+
+			break;
+		}
+		case 4:{
+			cout <<"Tenga un Buen Dia" << endl;
+			break;
+		}
+		default:{
+			
+			break;
+
+		}
+	   }
+
+	}while(opcion != 4);
+}
